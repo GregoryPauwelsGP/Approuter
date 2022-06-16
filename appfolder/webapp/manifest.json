@@ -1,0 +1,45 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "appfolder",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"productDataSource": {
+				"uri": "/sap/opu/odata/iwfnd/catalogservice;v=2/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "appfolder.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"productModel": {
+				"dataSource": "productDataSource"
+			}
+		}
+	}
+}
+  

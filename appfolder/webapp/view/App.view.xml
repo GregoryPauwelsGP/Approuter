@@ -1,0 +1,14 @@
+<mvc:View
+   controllerName="appfolder.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+   <Shell>
+      <App>
+         <pages>
+            <Page title="User Interface for SAP Cloud Platform Backend service ">
+		<content>
+		   <mvc:XMLView viewName="appfolder.view.ProductList"/>
+		</content>
+            </Page>
+         </pages>
+      </App>
+   </Shell>
+</mvc:View>

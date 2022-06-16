@@ -1,0 +1,24 @@
+applications:
+- name: capservicewithuiApprouter
+  host: capservicewithuiApprouter
+  path: appfolder
+  memory: 128M
+  disk-quota: 1500M
+  services: 
+  - CapServiceWithUI-xsuaa-service
+  - CapServiceWithUI_destination
+  - UI5WithCap_connectivity
+  properties: 
+  env:
+    CORS: >
+      [
+        {
+          "allowedOrigin":[
+                            {
+                                "host":"https://ec1e0f5etrial-dev-capservicewithui-srv.cfapps.us10.hana.ondemand.com",
+                                "protocol":"https"
+                            }
+                          ],
+          "uriPattern":"^/*$"
+        }
+      ]

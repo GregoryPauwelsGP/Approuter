@@ -1,0 +1,25 @@
+{
+  "authenticationMethod": "route",
+  "welcomeFile": "approuterhome/index.html",
+  "routes": [
+    {
+        "source": "^/approuterhome/cap_service/(.*)$",
+        "target": "$1",
+        "destination": "CapServiceDest",
+        "authenticationType": "none",
+        "csrfProtection": false
+    },
+    {
+        "source": "^/approuterhome/(.*)$",
+        "target": "$1",
+        "localDir": "webapp",
+        "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/sap/opu/(.*)$",
+      "target": "/sap/opu/$1",
+      "destination": "ODataDest",
+      "authenticationType": "none"
+    }
+  ]
+}

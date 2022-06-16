@@ -1,0 +1,30 @@
+{
+	"name": "approuter",
+	"description": "Node.js based application router service for html5-apps",
+	"engines": {
+		"node": "^10.0.0 || ^12.0.0"
+	},
+	"dependencies": {
+		"@openui5/sap.m": "^1.101.0",
+		"@openui5/sap.ui.core": "^1.101.0",
+		"@openui5/themelib_sap_belize": "^1.101.0",
+		"@sap/approuter": "^10.15.3",
+		"express": "^4.18.1",
+		"fs": "0.0.1-security",
+		"minimist": "^1.2.6",
+		"swagger-ui-express": "^4.4.0"
+	},
+	"devDependencies": {
+		"@sap/html5-repo-mock": "2.1.0",
+		"ui5-tooling-modules": "^0.3.2"
+	},
+    "ui5": {
+        "dependencies": [
+            "ui5-tooling-modules"
+        ]
+    },
+	"scripts": {
+		"start": "node node_modules/@sap/approuter/approuter.js",
+		"start-local": "node node_modules/@sap/html5-repo-mock/index.js"
+	}
+}
